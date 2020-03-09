@@ -1,6 +1,4 @@
 const colors = require("vuetify/es5/util/colors").default;
-const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
-const webpack = require("webpack");
 
 module.exports = {
   mode: "universal",
@@ -20,24 +18,13 @@ module.exports = {
       }
     ],
     link: [
-      {
+      { rel:"preload", href:" @/assets/variables.scss", as:"style",
+
         rel: "icon",
         type: "image/x-icon",
         href: "/favicon.ico",
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Bangers&display=swap",
-        rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.8.1/css/all.css",
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Quicksand",
-        rel: "stylesheet",
-        href:
-          "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css",
-        rel: "stylesheet",
+        rel: "stylesheet"
 
-        href: "https://fonts.googleapis.com/css?family=Open+Sans&display=swap",
-        rel: "stylesheet",
-        href: "vue-typed-js/dist/vue-typed-js.css"
       }
     ]
   },
@@ -48,14 +35,12 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["@/assets/css/registro.css"],
-  styleResources: {
-    scss: ["~/assets/variables.scss"]
-  },
+  css: [],
+
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/i18n.js", "~/plugins/element-ui"],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -92,33 +77,11 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios",
+   
     "@nuxtjs/pwa",
-    "@nuxtjs/style-resources",
-    "bootstrap-vue/nuxt",
-    [
-      "nuxt-fontawesome",
-      {
-        imports: [
-          {
-            set: "@fortawesome/free-solid-svg-icons",
-            icons: ["fas"]
-          },
-          {
-            set: "@fortawesome/free-brands-svg-icons",
-            icons: ["fab"]
-          }
-        ]
-      }
-    ],
-    [
-      "nuxt-buefy",
-      {
-        /* buefy options */
-      }
-    ]
-  ],
 
+
+  ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -131,17 +94,16 @@ module.exports = {
 
   /*
    ** Build configuration
-   */ router: {
-    middleware: "i18n"
+   */ router: {},
+    middleware:{
   },
   generate: {
-    routes: ["/", "/about", "/fr", "/fr/about"]
+    routes: []
   },
   build: {
     /*
      ** You can extend webpack config here
      */
-
     extend(config, ctx) {}
   }
 };

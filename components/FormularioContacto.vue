@@ -142,9 +142,11 @@
 import { mapActions, mapState } from "vuex";
 import Kontakt from "@/components/Kontakt";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+
 import CardKontakt from "@/components/kontakt/CardKontakt";
 import Footer from "@/components/footer/Footer";
+import "@fortawesome/fontawesome-free/css/all.css"
+
 
 export default {
   name: "FormularioContacto",
