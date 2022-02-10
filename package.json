@@ -23,7 +23,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "babel-plugin-component": "^1.1.1",
     "material-design-icons-iconfont": "^5.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "npm-check-updates": "^4.0.2",
     "sass-loader": "^8.0.2"
   }
